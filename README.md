@@ -2,8 +2,9 @@
 Korean Speech to English Translation Corpus
 
 ## Dataset
-### Default
-* Whole speech files, Train/Dev/Test filename list and their English translation
+### Freely available
+* Speech files
+* Train/Dev/Test filenames' list their English translation
 ### Provided under request
 * Korean scripts
 * Other metadata (for StyleKQC and Covid-ED)
@@ -25,6 +26,9 @@ Korean Speech to English Translation Corpus
 | ASR pretraining            |  5.9 |     24.0*    |        -        |
 | Transformer + Warm-up      | 11.6 |       -      |    35.7 (ST)*   |
 |              + Fine-tuning | 18.0 |       -      |        -        |
+
+## Recipe
+To be added later.
 
 ## Contact
 Contact Won Ik Cho tsatsuki@snu.ac.kr for further question.
