@@ -1,6 +1,13 @@
 # kosp2e
 Korean Speech to English Translation Corpus
 
+## Dataset
+### Default
+* Whole speech files, Train/Dev/Test filename list and their English translation
+### Provided under request
+* Korean scripts
+* Other metadata (for StyleKQC and Covid-ED)
+
 ## Specification
 |  Dataset |     License     |                  Domain                  |                                    Characteristics                                   |                           Volume<br>(Train / Dev / Test)                           | Tokens<br>(ko / en) | Speakers<br>(Total) |
 |:--------:|:---------------:|:----------------------------------------:|:------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------:|:-------------------:|:-------------------:|
@@ -9,11 +16,15 @@ Korean Speech to English Translation Corpus
 | StyleKQC |   CC-BY-SA 4.0  |          AI agent<br>(commands)          |                Speech act (4) <br>and topic (6)<br>labels are included               |                      30,000 utterances<br>(28,800 / 400 / 800)                     |     237K / 391K     |          60         |
 | Covid-ED | CC-BY-NC-SA 4.0 |           Diary<br>(monologue)           |             Sentences are in<br>document level;<br>emotion tags included             |                      32,284 utterances<br>(31,324 / 333 / 627)                     |     358K / 571K     |          71         |
 
-## Dataset
-* Speech files
-* Train/Dev/Test file list and English translation
-* Metadata (for StyleKQC and Covid-ED)
-* Korean scripts are provided under request
+## Baseline
+|            Model           | BLEU | WER<br>(ASR) | BLEU<br>(MT/ST) |
+|:--------------------------:|:----:|:------------:|:---------------:|
+| ASR-MT (Pororo)            | 16.6 |     34.0     |    18.5 (MT)    |
+| ASR-MT (PAPAGO)            | 21.3 |     34.0     |    25.0 (MT)    |
+| Transformer (Vanilla)      |  2.6 |       -      |        -        |
+| ASR pretraining            |  5.9 |     24.0*    |        -        |
+| Transformer + Warm-up      | 11.6 |       -      |    35.7 (ST)*   |
+|              + Fine-tuning | 18.0 |       -      |        -        |
 
 ## Contact
 Contact Won Ik Cho tsatsuki@snu.ac.kr for further question.
