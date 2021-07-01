@@ -27,6 +27,15 @@ Korean Speech to English Translation Corpus
 | Transformer + Warm-up      | 11.6 |       -      |    35.7 (ST)*   |
 |              + Fine-tuning | 18.0 |       -      |        -        |
 
+## Howto
+```
+git clone https://github.com/warnikchow/kosp2e
+cd kosp2e
+wget
+unzip data.zip
+```
+Then you get the folder with speech files (data) and split files' list (split).
+
 ## Recipe
 To be added later.
 
