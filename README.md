@@ -31,10 +31,12 @@ Korean Speech to English Translation Corpus
 ```
 git clone https://github.com/warnikchow/kosp2e
 cd kosp2e
-wget
+mkdir data
+cd data
+wget https://www.dropbox.com/s/y3kdlx467qspvqt/data.zip
 unzip data.zip
 ```
-Then you get the folder with speech files (data) and split files' list (split).
+Then you get the folder with speech files (*data* and subfolders) and split files' list (*split* and .xlsx files).
 
 ## Recipe
 To be added later.
