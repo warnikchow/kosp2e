@@ -10,6 +10,7 @@ Korean Speech to English Translation Corpus
 * Other metadata (for StyleKQC and Covid-ED)
 
 ## Specification
+License of each subcorpus follows the original license of the raw corpus. For *KSS* and *Covid-ED*, only academic usage is permitted.
 |  Dataset |     License     |                  Domain                  |                                    Characteristics                                   |                           Volume<br>(Train / Dev / Test)                           | Tokens<br>(ko / en) | Speakers<br>(Total) |
 |:--------:|:---------------:|:----------------------------------------:|:------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------:|:-------------------:|:-------------------:|
 |  Zeroth  |    CC-BY 4.0    |             News / newspaper             |                        DB originally for<br>speech recognition                       |         22,263 utterances<br>(3,004 unique scripts)<br>(21,589 / 197 / 461)        |      72K / 120K     |         115         |
