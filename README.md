@@ -9,8 +9,18 @@ Korean Speech to English Translation Corpus
 * Korean scripts
 * Other metadata (for StyleKQC and Covid-ED)
 
+## Howto
+```
+git clone https://github.com/warnikchow/kosp2e
+cd kosp2e
+mkdir data
+cd data
+wget https://www.dropbox.com/s/y3kdlx467qspvqt/data.zip
+unzip data.zip
+```
+Then you get the folder with speech files (*data* and subfolders) and split files' list (*split* and .xlsx files).
+
 ## Specification
-License of each subcorpus follows the original license of the raw corpus. For *KSS* and *Covid-ED*, only academic usage is permitted.
 |  Dataset |     License     |                  Domain                  |                                    Characteristics                                   |                           Volume<br>(Train / Dev / Test)                           | Tokens<br>(ko / en) | Speakers<br>(Total) |
 |:--------:|:---------------:|:----------------------------------------:|:------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------:|:-------------------:|:-------------------:|
 |  Zeroth  |    CC-BY 4.0    |             News / newspaper             |                        DB originally for<br>speech recognition                       |         22,263 utterances<br>(3,004 unique scripts)<br>(21,589 / 197 / 461)        |      72K / 120K     |         115         |
@@ -28,19 +38,30 @@ License of each subcorpus follows the original license of the raw corpus. For *K
 | Transformer + Warm-up      | 11.6 |       -      |    35.7 (ST)*   |
 |              + Fine-tuning | 18.0 |       -      |        -        |
 
-## Howto
-```
-git clone https://github.com/warnikchow/kosp2e
-cd kosp2e
-mkdir data
-cd data
-wget https://www.dropbox.com/s/y3kdlx467qspvqt/data.zip
-unzip data.zip
-```
-Then you get the folder with speech files (*data* and subfolders) and split files' list (*split* and .xlsx files).
-
-## Recipe
+### Recipe
 To be added later.
+
+## Acknowledgement
+This work was supported by PAPAGO, NAVER Corp. The authors appreciate Hyoung-Gyu Lee, ‪Eunjeong Lucy Park, Jihyung Moon, and Doosun Yoo for discussions and support.‬  Also, the authors thank Taeyoung Jo, Kyubyong Park, and Yoon Kyung Lee for sharing the resources.
+
+### Copyright
+```
+Copyright 2021-present NAVER Corp.
+```
+
+### License
+License of each subcorpus (including metadata and Korean script) follows the original license of the raw corpus. For *KSS* and *Covid-ED*, only academic usage is permitted.
+
+### Citation
+Will be updated if INTERSPEECH 2021 proceeding is out.
+```
+@article{cho2021kosp2e,
+  title={Kosp2e: Korean Speech to English Translation Corpus},
+  author={Cho, Won Ik and Kim, Seok Min and Cho, Hyunchang and Kim, Nam Soo},
+  journal={arXiv preprint arXiv:2107.02875},
+  year={2021}
+}
+```
 
 ## Contact
 Contact Won Ik Cho tsatsuki@snu.ac.kr for further question.
