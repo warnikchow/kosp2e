@@ -28,6 +28,9 @@ Then you get the folder with speech files (*data* and subfolders) and split file
 | StyleKQC |   CC-BY-SA 4.0  |          AI agent<br>(commands)          |                Speech act (4) <br>and topic (6)<br>labels are included               |                      30,000 utterances<br>(28,800 / 400 / 800)                     |     237K / 391K     |          60         |
 | Covid-ED | CC-BY-NC-SA 4.0 |           Diary<br>(monologue)           |             Sentences are in<br>document level;<br>emotion tags included             |                      32,284 utterances<br>(31,324 / 333 / 627)                     |     358K / 571K     |          71         |
 
+- The total number of *.wav* files in *Zeroth* dataset does not match with the total number of translation pairs that are provided, since some of the examples were excluded in the corpus construction to guarantee the data quality. However, to maintain files of the original *Zeroth* dataset, we did not delete them from the *.wav* files folder. The preprocessing and data loading is not affected by the difference of file list.
+- Currently, the emotion tags in *Covid-ED* dataset is in cleansing. This does not affect the end-to-end or pipeline processing of the files.
+
 ## Baseline
 |            Model           | BLEU | WER<br>(ASR) | BLEU<br>(MT/ST) |
 |:--------------------------:|:----:|:------------:|:---------------:|
