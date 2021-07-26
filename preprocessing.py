@@ -29,7 +29,7 @@ for i in data:
         for k in range(len(df_excel)):
             #print (k, end="\r")
             exist_list.append(df_excel.iloc[k][1])
-            kr_list.append("한국어 텍스트 필요시 요청바람")
+            kr_list.append("한국어 텍스트 필요시 요청바람/Request if you need Korean scripts.")
             eng_list.append(df_excel.iloc[k][2])
         
         g = open("dataset/kr-en/data/"+j+"/txt/"+j+".kr", "a", encoding="UTF8")
