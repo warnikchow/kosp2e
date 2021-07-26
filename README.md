@@ -37,10 +37,10 @@ Then you get the folder with speech files (*data* and subfolders) and split file
 | ASR-MT (PAPAGO)            | 21.3 |     34.0     |    25.0 (MT)    |
 | Transformer (Vanilla)      |  2.6 |       -      |        -        |
 | ASR pretraining            |  5.9 |     24.0*    |        -        |
-| Transformer + Warm-up      |  8.7 |       -      |    35.7 (ST)*   |
-|              + Fine-tuning | 18.0 |       -      |        -        |
+| Transformer + Warm-up      |  *8.7* |       -      |    35.7 (ST)*   |
+|              + Fine-tuning | *18.3* |       -      |        -        |
 
-- Some of the numerics differ with the paper, but may not influence the results much.
+- Some of the numerics differ with the paper (after fixing some errors), but may not influence the results much.
 
 ### Recipe
 You may need to git clone [specific fairseq version](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3) for replication.
