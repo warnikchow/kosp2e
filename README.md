@@ -40,7 +40,7 @@ Then you get the folder with speech files (*data* and subfolders) and split file
 | Transformer + Warm-up      |  8.7 |       -      |    35.7 (ST)*   |
 |              + Fine-tuning | 18.0 |       -      |        -        |
 
-- The results are in update with the continuous training. Some of the results may differ with the paper.
+- Some of the numerics differ with the paper, but may not influence the results much.
 
 ### Recipe
 You may need to git clone [specific fairseq version](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3) for replication.
