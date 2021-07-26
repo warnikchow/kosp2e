@@ -43,11 +43,11 @@ Then you get the folder with speech files (*data* and subfolders) and split file
 - *Some of the numerics* differ from the paper (after fixing some errors), but may not influence the results much.
 
 ### Recipe
-- You may need to git clone [specific fairseq version](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3) for replication.
+- [Fairseq](https://github.com/pytorch/fairseq) is required for the basic recipe. You may need to git clone [specific fairseq version](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3) for replication.
 - First, you preprocess the data, and then prepare them in a format that fit with transformer. Other part follows [fairseq S2T translation recipe with MuST-C](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3/examples/speech_to_text). You may customize *CUDA_VISIBLE_DEVICES* part for your device. 
 - The recipe below leads you to the *Vanilla* model (the most basic end-to-end version). For the advanced training, refer to the [paper]((https://arxiv.org/abs/2107.02875) below.
 ```
-preprocessing.py
+python preprocessing.py
 
 python prep_data.py --data-root dataset/ --task st --vocab-type unigram --vocab-size 8000
 
