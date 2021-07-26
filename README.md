@@ -37,8 +37,10 @@ Then you get the folder with speech files (*data* and subfolders) and split file
 | ASR-MT (PAPAGO)            | 21.3 |     34.0     |    25.0 (MT)    |
 | Transformer (Vanilla)      |  2.6 |       -      |        -        |
 | ASR pretraining            |  5.9 |     24.0*    |        -        |
-| Transformer + Warm-up      | 11.6 |       -      |    35.7 (ST)*   |
+| Transformer + Warm-up      |  8.7 |       -      |    35.7 (ST)*   |
 |              + Fine-tuning | 18.0 |       -      |        -        |
+
+- The results are in update with the continuous training. Some of the results may differ with the paper.
 
 ### Recipe
 You may need to git clone [specific fairseq version](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3) for replication.
@@ -63,7 +65,7 @@ Copyright 2021-present NAVER Corp.
 License of each subcorpus (including metadata and Korean script) follows the original license of the raw corpus. For *KSS* and *Covid-ED*, only academic usage is permitted.
 
 ### Citation
-Will be updated if *INTERSPEECH 2021 proceedings* is out.
+Will be updated if *INTERSPEECH 2021 proceedings* is out. arXiv version is [here](https://arxiv.org/abs/2107.02875).
 ```
 @article{cho2021kosp2e,
   title={Kosp2e: Korean Speech to English Translation Corpus},
