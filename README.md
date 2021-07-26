@@ -44,13 +44,18 @@ Then you get the folder with speech files (*data* and subfolders) and split file
 
 ### Recipe
 You may need to git clone [specific fairseq version](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3) for replication.
-First, you preprocess the data, and then prepare them in a format that fit with transformer. Other part follows [fairseq S2T translation recipe with MuST-C](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3/examples/speech_to_text).
+First, you preprocess the data, and then prepare them in a format that fit with transformer. Other part follows [fairseq S2T translation recipe with MuST-C](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3/examples/speech_to_text). You may customize *CUDA_VISIBLE_DEVICES* part for your device.
 ```
 preprocessing.py
 
 python prep_data.py --data-root dataset/ --task st --vocab-type unigram --vocab-size 8000
 
-CUDA_VISIBLE_DEVICES=4,5,6,7 fairseq-train dataset/kr-en  --config-yaml config_st.yaml --train-subset train_st --valid-subset dev_st --save-dir result --num-workers 4 --max-tokens 40000 --max-update 50000 --task speech_to_text --criterion label_smoothed_cross_entropy --report-accuracy --arch s2t_transformer_s --optimizer adam --lr 2e-3 --lr-scheduler inverse_sqrt --warmup-updates 10000 --clip-norm 10.0 --seed 1 --update-freq 8 --fp16 
+CUDA_VISIBLE_DEVICES=4,5,6,7 fairseq-train dataset/kr-en  --config-yaml config_st.yaml \
+--train-subset train_st --valid-subset dev_st --save-dir result --num-workers 4 \
+--max-tokens 40000 --max-update 50000 --task speech_to_text \
+--criterion label_smoothed_cross_entropy --report-accuracy \
+--arch s2t_transformer_s --optimizer adam --lr 2e-3 --lr-scheduler inverse_sqrt \
+--warmup-updates 10000 --clip-norm 10.0 --seed 1 --update-freq 8 --fp16 
 ```
 
 ## Acknowledgement
