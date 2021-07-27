@@ -43,9 +43,9 @@ Then you get the folder with speech files (*data* and subfolders) and split file
 
 ### Recipe
 - [Fairseq](https://github.com/pytorch/fairseq) is required for the basic recipe. You may need to git clone [specific fairseq version](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3) for replication.
-- First, you preprocess the data, and then prepare them in a format that fit with transformer. Other part follows [fairseq S2T translation recipe with MuST-C](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3/examples/speech_to_text). 
-- The recipe below leads you to the *Vanilla* model (the most basic end-to-end version). For the advanced training, refer to the [paper](https://arxiv.org/abs/2107.02875) below.
 ```
+pip install -r requirements.txt
+
 python preprocessing.py
 
 python prep_data.py --data-root dataset/ --task st --vocab-type unigram --vocab-size 8000
@@ -57,6 +57,8 @@ fairseq-train dataset/kr-en  --config-yaml config_st.yaml \
 --arch s2t_transformer_s --optimizer adam --lr 2e-3 --lr-scheduler inverse_sqrt \
 --warmup-updates 10000 --clip-norm 10.0 --seed 1 --update-freq 8 --fp16 
 ```
+- First, you preprocess the data, and then prepare them in a format that fit with transformer. Other part follows [fairseq S2T translation recipe with MuST-C](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3/examples/speech_to_text). 
+- This recipe leads you to the *Vanilla* model (the most basic end-to-end version). For the advanced training, refer to the [paper](https://arxiv.org/abs/2107.02875) below.
 
 ## Acknowledgement
 This work was supported by **PAPAGO, NAVER Corp.** The authors appreciate Hyoung-Gyu Lee, ‪Eunjeong Lucy Park, Jihyung Moon, and Doosun Yoo for discussions and support.‬  Also, the authors thank Taeyoung Jo, Kyubyong Park, and Yoon Kyung Lee for sharing the resources.
