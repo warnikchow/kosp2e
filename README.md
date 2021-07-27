@@ -44,14 +44,14 @@ Then you get the folder with speech files (*data* and subfolders) and split file
 
 ### Recipe
 - [Fairseq](https://github.com/pytorch/fairseq) is required for the basic recipe. You may need to git clone [specific fairseq version](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3) for replication.
-- First, you preprocess the data, and then prepare them in a format that fit with transformer. Other part follows [fairseq S2T translation recipe with MuST-C](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3/examples/speech_to_text). You may customize *CUDA_VISIBLE_DEVICES* part for your device. 
+- First, you preprocess the data, and then prepare them in a format that fit with transformer. Other part follows [fairseq S2T translation recipe with MuST-C](https://github.com/pytorch/fairseq/tree/148327d8c1e3a5f9d17a11bbb1973a7cf3f955d3/examples/speech_to_text). 
 - The recipe below leads you to the *Vanilla* model (the most basic end-to-end version). For the advanced training, refer to the [paper](https://arxiv.org/abs/2107.02875) below.
 ```
 python preprocessing.py
 
 python prep_data.py --data-root dataset/ --task st --vocab-type unigram --vocab-size 8000
 
-CUDA_VISIBLE_DEVICES=4,5,6,7 fairseq-train dataset/kr-en  --config-yaml config_st.yaml \
+fairseq-train dataset/kr-en  --config-yaml config_st.yaml \
 --train-subset train_st --valid-subset dev_st --save-dir result --num-workers 4 \
 --max-tokens 40000 --max-update 50000 --task speech_to_text \
 --criterion label_smoothed_cross_entropy --report-accuracy \
