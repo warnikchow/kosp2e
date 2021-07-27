@@ -13,7 +13,6 @@ Korean Speech to English Translation Corpus
 ```
 git clone https://github.com/warnikchow/kosp2e
 cd kosp2e
-mkdir data
 cd data
 wget https://www.dropbox.com/s/y74ew1c1evdoxs1/data.zip
 unzip data.zip
