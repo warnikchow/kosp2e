@@ -78,15 +78,17 @@ Copyright 2021-present NAVER Corp.
 License of each subcorpus (including metadata and Korean script) follows the original license of the raw corpus. For *KSS* and *Covid-ED*, only academic usage is permitted.
 
 ### Citation
-Will be updated if *INTERSPEECH 2021 proceedings* is out. arXiv version is [here](https://arxiv.org/abs/2107.02875).
 ```
-@article{cho2021kosp2e,
-  title={Kosp2e: Korean Speech to English Translation Corpus},
-  author={Cho, Won Ik and Kim, Seok Min and Cho, Hyunchang and Kim, Nam Soo},
-  journal={arXiv preprint arXiv:2107.02875},
-  year={2021}
+@inproceedings{cho21b_interspeech,
+  author={Won Ik Cho and Seok Min Kim and Hyunchang Cho and Nam Soo Kim},
+  title={{kosp2e: Korean Speech to English Translation Corpus}},
+  year=2021,
+  booktitle={Proc. Interspeech 2021},
+  pages={3705--3709},
+  doi={10.21437/Interspeech.2021-1040}
 }
 ```
+arXiv version is [here](https://arxiv.org/abs/2107.02875).
 
 ## Contact
 Contact Won Ik Cho tsatsuki@snu.ac.kr for further question.
